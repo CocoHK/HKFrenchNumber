@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10E4AE6116E8F91B00C0311F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6016E8F91B00C0311F /* UIKit.framework */; };
+		10E4AE6316E8F91B00C0311F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6216E8F91B00C0311F /* Foundation.framework */; };
+		10E4AE6516E8F91B00C0311F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6416E8F91B00C0311F /* CoreGraphics.framework */; };
+		10E4AE6B16E8F91B00C0311F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE6916E8F91B00C0311F /* InfoPlist.strings */; };
+		10E4AE6D16E8F91B00C0311F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE6C16E8F91B00C0311F /* main.m */; };
+		10E4AE7116E8F91B00C0311F /* FNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE7016E8F91B00C0311F /* FNAppDelegate.m */; };
+		10E4AE7316E8F91B00C0311F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7216E8F91B00C0311F /* Default.png */; };
+		10E4AE7516E8F91B00C0311F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7416E8F91B00C0311F /* Default@2x.png */; };
+		10E4AE7716E8F91B00C0311F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7616E8F91B00C0311F /* Default-568h@2x.png */; };
+		10E4AE7A16E8F91B00C0311F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7816E8F91B00C0311F /* MainStoryboard_iPhone.storyboard */; };
+		10E4AE7D16E8F91B00C0311F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */; };
+		10E4AE8016E8F91B00C0311F /* FNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE7F16E8F91B00C0311F /* FNViewController.m */; };
+		10E4AE8816E8F91B00C0311F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE8716E8F91B00C0311F /* SenTestingKit.framework */; };
+		10E4AE8916E8F91B00C0311F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6016E8F91B00C0311F /* UIKit.framework */; };
+		10E4AE8A16E8F91B00C0311F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6216E8F91B00C0311F /* Foundation.framework */; };
+		10E4AE9216E8F91B00C0311F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE9016E8F91B00C0311F /* InfoPlist.strings */; };
+		10E4AE9516E8F91B00C0311F /* FrenchNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */; };
+		10FC4EC3170DB79200291762 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FC4EC2170DB79200291762 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10E4AE8B16E8F91B00C0311F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10E4AE5516E8F91B00C0311F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10E4AE5C16E8F91B00C0311F;
+			remoteInfo = FrenchNumber;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E4AE6016E8F91B00C0311F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		10E4AE6216E8F91B00C0311F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		10E4AE6416E8F91B00C0311F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		10E4AE6816E8F91B00C0311F /* FrenchNumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FrenchNumber-Info.plist"; sourceTree = "<group>"; };
+		10E4AE6A16E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		10E4AE6C16E8F91B00C0311F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		10E4AE6E16E8F91B00C0311F /* FrenchNumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrenchNumber-Prefix.pch"; sourceTree = "<group>"; };
+		10E4AE6F16E8F91B00C0311F /* FNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNAppDelegate.h; sourceTree = "<group>"; };
+		10E4AE7016E8F91B00C0311F /* FNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNAppDelegate.m; sourceTree = "<group>"; };
+		10E4AE7216E8F91B00C0311F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		10E4AE7416E8F91B00C0311F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		10E4AE7616E8F91B00C0311F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		10E4AE7916E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		10E4AE7C16E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		10E4AE7E16E8F91B00C0311F /* FNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNViewController.h; sourceTree = "<group>"; };
+		10E4AE7F16E8F91B00C0311F /* FNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNViewController.m; sourceTree = "<group>"; };
+		10E4AE8616E8F91B00C0311F /* FrenchNumberTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchNumberTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E4AE8716E8F91B00C0311F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		10E4AE8F16E8F91B00C0311F /* FrenchNumberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FrenchNumberTests-Info.plist"; sourceTree = "<group>"; };
+		10E4AE9116E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		10E4AE9316E8F91B00C0311F /* FrenchNumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenchNumberTests.h; sourceTree = "<group>"; };
+		10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrenchNumberTests.m; sourceTree = "<group>"; };
+		10FC4EC2170DB79200291762 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10E4AE5A16E8F91B00C0311F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10FC4EC3170DB79200291762 /* QuartzCore.framework in Frameworks */,
+				10E4AE6116E8F91B00C0311F /* UIKit.framework in Frameworks */,
+				10E4AE6316E8F91B00C0311F /* Foundation.framework in Frameworks */,
+				10E4AE6516E8F91B00C0311F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E4AE8216E8F91B00C0311F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E4AE8816E8F91B00C0311F /* SenTestingKit.framework in Frameworks */,
+				10E4AE8916E8F91B00C0311F /* UIKit.framework in Frameworks */,
+				10E4AE8A16E8F91B00C0311F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10E4AE5416E8F91A00C0311F = {
+			isa = PBXGroup;
+			children = (
+				10E4AE6616E8F91B00C0311F /* FrenchNumber */,
+				10E4AE8D16E8F91B00C0311F /* FrenchNumberTests */,
+				10E4AE5F16E8F91B00C0311F /* Frameworks */,
+				10E4AE5E16E8F91B00C0311F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10E4AE5E16E8F91B00C0311F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */,
+				10E4AE8616E8F91B00C0311F /* FrenchNumberTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10E4AE5F16E8F91B00C0311F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10E4AE6416E8F91B00C0311F /* CoreGraphics.framework */,
+				10E4AE6216E8F91B00C0311F /* Foundation.framework */,
+				10FC4EC2170DB79200291762 /* QuartzCore.framework */,
+				10E4AE8716E8F91B00C0311F /* SenTestingKit.framework */,
+				10E4AE6016E8F91B00C0311F /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10E4AE6616E8F91B00C0311F /* FrenchNumber */ = {
+			isa = PBXGroup;
+			children = (
+				10E4AE6F16E8F91B00C0311F /* FNAppDelegate.h */,
+				10E4AE7016E8F91B00C0311F /* FNAppDelegate.m */,
+				10E4AE7816E8F91B00C0311F /* MainStoryboard_iPhone.storyboard */,
+				10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */,
+				10E4AE7E16E8F91B00C0311F /* FNViewController.h */,
+				10E4AE7F16E8F91B00C0311F /* FNViewController.m */,
+				10E4AE6716E8F91B00C0311F /* Supporting Files */,
+			);
+			path = FrenchNumber;
+			sourceTree = "<group>";
+		};
+		10E4AE6716E8F91B00C0311F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10E4AE6816E8F91B00C0311F /* FrenchNumber-Info.plist */,
+				10E4AE6916E8F91B00C0311F /* InfoPlist.strings */,
+				10E4AE6C16E8F91B00C0311F /* main.m */,
+				10E4AE6E16E8F91B00C0311F /* FrenchNumber-Prefix.pch */,
+				10E4AE7216E8F91B00C0311F /* Default.png */,
+				10E4AE7416E8F91B00C0311F /* Default@2x.png */,
+				10E4AE7616E8F91B00C0311F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10E4AE8D16E8F91B00C0311F /* FrenchNumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				10E4AE9316E8F91B00C0311F /* FrenchNumberTests.h */,
+				10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */,
+				10E4AE8E16E8F91B00C0311F /* Supporting Files */,
+			);
+			path = FrenchNumberTests;
+			sourceTree = "<group>";
+		};
+		10E4AE8E16E8F91B00C0311F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10E4AE8F16E8F91B00C0311F /* FrenchNumberTests-Info.plist */,
+				10E4AE9016E8F91B00C0311F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10E4AE5C16E8F91B00C0311F /* FrenchNumber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E4AE9816E8F91B00C0311F /* Build configuration list for PBXNativeTarget "FrenchNumber" */;
+			buildPhases = (
+				10E4AE5916E8F91B00C0311F /* Sources */,
+				10E4AE5A16E8F91B00C0311F /* Frameworks */,
+				10E4AE5B16E8F91B00C0311F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrenchNumber;
+			productName = FrenchNumber;
+			productReference = 10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10E4AE8516E8F91B00C0311F /* FrenchNumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E4AE9B16E8F91B00C0311F /* Build configuration list for PBXNativeTarget "FrenchNumberTests" */;
+			buildPhases = (
+				10E4AE8116E8F91B00C0311F /* Sources */,
+				10E4AE8216E8F91B00C0311F /* Frameworks */,
+				10E4AE8316E8F91B00C0311F /* Resources */,
+				10E4AE8416E8F91B00C0311F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10E4AE8C16E8F91B00C0311F /* PBXTargetDependency */,
+			);
+			name = FrenchNumberTests;
+			productName = FrenchNumberTests;
+			productReference = 10E4AE8616E8F91B00C0311F /* FrenchNumberTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10E4AE5516E8F91B00C0311F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Coco;
+			};
+			buildConfigurationList = 10E4AE5816E8F91B00C0311F /* Build configuration list for PBXProject "FrenchNumber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 10E4AE5416E8F91A00C0311F;
+			productRefGroup = 10E4AE5E16E8F91B00C0311F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10E4AE5C16E8F91B00C0311F /* FrenchNumber */,
+				10E4AE8516E8F91B00C0311F /* FrenchNumberTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10E4AE5B16E8F91B00C0311F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E4AE6B16E8F91B00C0311F /* InfoPlist.strings in Resources */,
+				10E4AE7316E8F91B00C0311F /* Default.png in Resources */,
+				10E4AE7516E8F91B00C0311F /* Default@2x.png in Resources */,
+				10E4AE7716E8F91B00C0311F /* Default-568h@2x.png in Resources */,
+				10E4AE7A16E8F91B00C0311F /* MainStoryboard_iPhone.storyboard in Resources */,
+				10E4AE7D16E8F91B00C0311F /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E4AE8316E8F91B00C0311F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E4AE9216E8F91B00C0311F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10E4AE8416E8F91B00C0311F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10E4AE5916E8F91B00C0311F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E4AE6D16E8F91B00C0311F /* main.m in Sources */,
+				10E4AE7116E8F91B00C0311F /* FNAppDelegate.m in Sources */,
+				10E4AE8016E8F91B00C0311F /* FNViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E4AE8116E8F91B00C0311F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E4AE9516E8F91B00C0311F /* FrenchNumberTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10E4AE8C16E8F91B00C0311F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10E4AE5C16E8F91B00C0311F /* FrenchNumber */;
+			targetProxy = 10E4AE8B16E8F91B00C0311F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10E4AE6916E8F91B00C0311F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10E4AE6A16E8F91B00C0311F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		10E4AE7816E8F91B00C0311F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10E4AE7916E8F91B00C0311F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10E4AE7C16E8F91B00C0311F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		10E4AE9016E8F91B00C0311F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10E4AE9116E8F91B00C0311F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10E4AE9616E8F91B00C0311F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10E4AE9716E8F91B00C0311F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10E4AE9916E8F91B00C0311F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
+				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		10E4AE9A16E8F91B00C0311F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
+				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		10E4AE9C16E8F91B00C0311F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FrenchNumber.app/FrenchNumber";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
+				INFOPLIST_FILE = "FrenchNumberTests/FrenchNumberTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		10E4AE9D16E8F91B00C0311F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FrenchNumber.app/FrenchNumber";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
+				INFOPLIST_FILE = "FrenchNumberTests/FrenchNumberTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10E4AE5816E8F91B00C0311F /* Build configuration list for PBXProject "FrenchNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E4AE9616E8F91B00C0311F /* Debug */,
+				10E4AE9716E8F91B00C0311F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E4AE9816E8F91B00C0311F /* Build configuration list for PBXNativeTarget "FrenchNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E4AE9916E8F91B00C0311F /* Debug */,
+				10E4AE9A16E8F91B00C0311F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E4AE9B16E8F91B00C0311F /* Build configuration list for PBXNativeTarget "FrenchNumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E4AE9C16E8F91B00C0311F /* Debug */,
+				10E4AE9D16E8F91B00C0311F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10E4AE5516E8F91B00C0311F /* Project object */;
+}

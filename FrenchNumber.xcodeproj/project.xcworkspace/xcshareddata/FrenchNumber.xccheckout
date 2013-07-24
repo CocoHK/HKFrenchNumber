@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D0EFFB49-6E71-4A86-B8F0-A89AA8DF6E07</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FrenchNumber</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2E39294B-294F-4BFC-A672-65C30200442A</key>
+		<string>ssh://github.com/CocoHK/HKFrenchNumber.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FrenchNumber.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2E39294B-294F-4BFC-A672-65C30200442A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/CocoHK/HKFrenchNumber.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2E39294B-294F-4BFC-A672-65C30200442A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2E39294B-294F-4BFC-A672-65C30200442A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HKFrenchNumber</string>
+		</dict>
+	</array>
+</dict>
+</plist>
