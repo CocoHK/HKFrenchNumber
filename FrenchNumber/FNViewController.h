@@ -17,7 +17,7 @@
     IBOutlet UITextView *showText;
     IBOutlet UITextField *typeText;
     
-    BOOL buttonNumber;
+    BOOL translateModel;
 
 
 }
