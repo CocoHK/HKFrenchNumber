@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10CCDFF817BEE87500DE1136 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CCDFF717BEE87500DE1136 /* iAd.framework */; };
 		10E4AE6116E8F91B00C0311F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6016E8F91B00C0311F /* UIKit.framework */; };
 		10E4AE6316E8F91B00C0311F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6216E8F91B00C0311F /* Foundation.framework */; };
 		10E4AE6516E8F91B00C0311F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6416E8F91B00C0311F /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10CCDFF717BEE87500DE1136 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E4AE6016E8F91B00C0311F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		10E4AE6216E8F91B00C0311F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CCDFF817BEE87500DE1136 /* iAd.framework in Frameworks */,
 				10FC4EC3170DB79200291762 /* QuartzCore.framework in Frameworks */,
 				10E4AE6116E8F91B00C0311F /* UIKit.framework in Frameworks */,
 				10E4AE6316E8F91B00C0311F /* Foundation.framework in Frameworks */,
@@ -89,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10AFB60E17ABF46600681643 /* third-party codes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "third-party codes";
+			sourceTree = "<group>";
+		};
 		10E4AE5416E8F91A00C0311F = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		10E4AE5F16E8F91B00C0311F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10CCDFF717BEE87500DE1136 /* iAd.framework */,
 				10E4AE6416E8F91B00C0311F /* CoreGraphics.framework */,
 				10E4AE6216E8F91B00C0311F /* Foundation.framework */,
 				10FC4EC2170DB79200291762 /* QuartzCore.framework */,
@@ -129,6 +140,7 @@
 				10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */,
 				10E4AE7E16E8F91B00C0311F /* FNViewController.h */,
 				10E4AE7F16E8F91B00C0311F /* FNViewController.m */,
+				10AFB60E17ABF46600681643 /* third-party codes */,
 				10E4AE6716E8F91B00C0311F /* Supporting Files */,
 			);
 			path = FrenchNumber;

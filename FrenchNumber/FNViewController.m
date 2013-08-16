@@ -7,56 +7,148 @@
 //
 
 #import "FNViewController.h"
+@interface FNViewController () {
+//    CGRect originalBounds;
+    CGRect originalFrame;
 
-@interface FNViewController (){
-    
 }
+
+@property (nonatomic, retain) UIButton *dotButton;
+
+- (IBAction)changeMode:(id)sender;
 
 @end
 
 @implementation FNViewController
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShowNotification:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHideNotification:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+}
 
-- (void)viewDidLoad
-{
+
+- (void)keyboardDidShowNotification:(NSNotification *)notification {
+//    UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
+//    for(int i=0; i<[tempWindow.subviews count]; i++) {
+//        keyboardView = [tempWindow.subviews objectAtIndex:i];
+//    }
+//        [self addButtonToKeyboard];
+    CGRect finalRect;
+    originalFrame = self.view.frame;
+    NSLog(@"originalFrame is %@",NSStringFromCGRect(originalFrame));
+
+    CGSize kbSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    NSLog(@"kbSize is %@",NSStringFromCGSize(kbSize));
+    switch ([UIApplication sharedApplication].statusBarOrientation) {
+        case UIInterfaceOrientationPortrait:
+            finalRect = CGRectMake(originalFrame.origin.x,originalFrame.origin.y,originalFrame.size.width,originalFrame.size.height - kbSize.height);
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            finalRect = CGRectMake(kbSize.width,originalFrame.origin.y,originalFrame.size.width - kbSize.width,originalFrame.size.height);
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            finalRect = CGRectMake(originalFrame.origin.x,originalFrame.origin.y,originalFrame.size.width - kbSize.width,originalFrame.size.height);
+            break;
+        default:
+            break;
+    }
+    NSLog(@"Final Rect: %@",NSStringFromCGRect(finalRect));
+    self.view.frame = finalRect;
+
+}
+
+- (void)keyboardWillHideNotification:(NSNotification *)notification {
+    self.view.frame =  originalFrame;
+}
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
     typeText.layer.cornerRadius = 5.0;
+    showText.layer.cornerRadius = 5.0;
+
+
     self.positiveInt = [NSCharacterSet characterSetWithCharactersInString:@"123456789"];
-    self.point =[NSCharacterSet characterSetWithCharactersInString:@".,"];
+    self.point =[NSCharacterSet characterSetWithCharactersInString:@"."];
     
-    translateModel = 0;
-    NSLog(@"button number is %d",translateModel);
+    [self setTranslationMode:0];
     
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                         action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    [tap release];
 }
 
--(IBAction)clickNormalBtn:(id)sender{
-    translateModel = 0;
-    NSLog(@"button number is %d",translateModel);
-    
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+//    NSLog(@"%@",NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]));
+    NSLog(@"frame%@",NSStringFromCGRect(self.view.frame));
+
 }
 
--(IBAction)clickChequeBtn:(id)sender{
-    translateModel = 1;
-    NSLog(@"button number is %d",translateModel);
-    
+
+- (void)dismissKeyboard {
+    [typeText resignFirstResponder];
 }
 
--(IBAction)clickTeleBtn:(id)sender{
-    translateModel = 2;
-    NSLog(@"button number is %d",translateModel);
-    
+- (void)setTranslationMode:(int)mode {
+    translateModel = mode;
+    [self updateKeyboard:mode];
+
 }
 
+- (IBAction)changeMode:(id)sender {
+    [self setTranslationMode:((UIButton *)sender).tag];
+
+    NSLog(@"button number is %d",translateModel);
+}
+
+- (void)updateKeyboard:(int)currentMode {
+    switch (translateModel) {
+        case 0:
+        case 1:
+        {
+            [typeText setKeyboardType:UIKeyboardTypeDecimalPad];
+        }
+            break;
+        case 2:
+        {
+            [typeText setKeyboardType:UIKeyboardTypeNumberPad];
+
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField{
+    showText.text = @"";
+
+    return YES;
+    
+}
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    //translate normal numbers and euros
-    if (translateModel == 0 || translateModel == 1) {        
+    if (translateModel == 0 || translateModel == 1) {
         
         // add numbers
         if (range.length == 0) {
             self.typeString = [textField.text stringByAppendingString:string];
-            NSString *regex = @"^\\d*[\\.|,]?\\d*$";
+            NSString *regex = @"^\\d*[\\.]?\\d*$";
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
             BOOL isMatch = [predicate evaluateWithObject:self.typeString];
             if (isMatch) {
@@ -104,7 +196,8 @@
             
             if ([textField.text length] > range.length) {
                 self.typeString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
-                
+                NSLog(@"textfield is %d range is %d string is %@  typestring is %@",[textField.text length],range.length,string,self.typeString);
+
                 [self translateNumber];
                 
             }
