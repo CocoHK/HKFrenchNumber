@@ -242,39 +242,55 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *temString;
+    BOOL returnValue;
     if (translateModel == 0 || translateModel == 1) {
-        
         // add numbers
         if (range.length == 0) {
-            self.typeString = [textField.text stringByAppendingString:string];
+//            self.typeString = [textField.text stringByAppendingString:string];
+            temString = [textField.text stringByAppendingString:string];
             NSString *regex = @"^\\d*[\\.]?\\d*$";
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-            BOOL isMatch = [predicate evaluateWithObject:self.typeString];
+//            BOOL isMatch = [predicate evaluateWithObject:self.typeString];
+            BOOL isMatch = [predicate evaluateWithObject:temString];
+
             if (isMatch) {
                 //judge when the first character is 0
-                if ([self.typeString characterAtIndex:0] == '0'&&
-                    [self.typeString length] >= 2 &&
-                    ([self.typeString characterAtIndex:1] != '.' &&
-                     [self.typeString characterAtIndex:1] != ','))
+//                if ([self.typeString characterAtIndex:0] == '0'&&
+//                    [self.typeString length] >= 2 &&
+//                    ([self.typeString characterAtIndex:1] != '.' &&
+//                     [self.typeString characterAtIndex:1] != ','))
+                    if ([temString characterAtIndex:0] == '0'&&
+                        [temString length] >= 2 &&
+                        ([temString characterAtIndex:1] != '.' &&
+                         [temString characterAtIndex:1] != ','))
+
                     isMatch = NO;
             }
             if (isMatch) {
-                if ([self.typeString rangeOfCharacterFromSet:self.point].location == NSNotFound){
-                    if ([self.typeString length] > 23)
-                        isMatch = NO;
+//                if ([self.typeString rangeOfCharacterFromSet:self.point].location == NSNotFound){
+//                    if ([self.typeString length] > 23)
+                if ([temString rangeOfCharacterFromSet:self.point].location == NSNotFound){
+                    if ([temString length] > 23)
+                isMatch = NO;
                 }
                 else{
-                    int location = [self.typeString rangeOfCharacterFromSet:self.point].location;
-                    
+//                    int location = [self.typeString rangeOfCharacterFromSet:self.point].location;
+                    int location = [temString rangeOfCharacterFromSet:self.point].location;
+
                     if (translateModel == 0) {
-                        if ([[self.typeString substringToIndex:location] length] > 23 ||
-                            [[self.typeString substringFromIndex:location+1] length] > 21)
-                            isMatch = NO;
+//                        if ([[self.typeString substringToIndex:location] length] > 23 ||
+//                            [[self.typeString substringFromIndex:location+1] length] > 21)
+
+                        if ([[temString substringToIndex:location] length] > 23 ||
+                            [[temString substringFromIndex:location+1] length] > 21)
+                        isMatch = NO;
                     }
                     else if (translateModel == 1){
-                        if ([[self.typeString substringToIndex:location] length] > 23 ||
-                            [[self.typeString substringFromIndex:location+1] length] > 2)
-                            
+//                        if ([[self.typeString substringToIndex:location] length] > 23 ||
+//                            [[self.typeString substringFromIndex:location+1] length] > 2)
+                        if ([[temString substringToIndex:location] length] > 23 ||
+                            [[temString substringFromIndex:location+1] length] > 2)
                             isMatch = NO;
                     }
                 }
@@ -283,11 +299,12 @@
             
             
             if (isMatch) {
+                self.typeString = temString;
                 [self translateNumber];
             }
             else{
-                NSLog(@"typestringis %@",self.typeString);
-                return NO;
+//                return NO;
+                returnValue = NO;
             }
         }
         
@@ -295,9 +312,11 @@
             //delete numbers
             
             if ([textField.text length] > range.length) {
-                self.typeString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
-                NSLog(@"textfield is %d range is %d string is %@  typestring is %@",[textField.text length],range.length,string,self.typeString);
-
+//                self.typeString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
+//                NSLog(@"textfield is %d range is %d string is %@  typestring is %@",[textField.text length],range.length,string,self.typeString);
+                temString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
+                NSLog(@"textfield is %d range is %d string is %@  typestring is %@",[textField.text length],range.length,string,temString);
+                self.typeString = temString;
                 [self translateNumber];
                 
             }
@@ -305,7 +324,6 @@
                 showText.text =@"";
             }}
         
-        NSLog(@"typeString is %@",self.typeString);
     }
     
     
@@ -315,27 +333,35 @@
         //add numbers
         if (range.length == 0) {
             
-            self.typeString = [textField.text stringByAppendingString:string];
+//            self.typeString = [textField.text stringByAppendingString:string];
+            temString = [textField.text stringByAppendingString:string];
+
+            
             NSString *regex = @"^\\d{1,10}$";
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-            BOOL isMatch = [predicate evaluateWithObject:self.typeString];
+//            BOOL isMatch = [predicate evaluateWithObject:self.typeString];
+            BOOL isMatch = [predicate evaluateWithObject:temString];
             
             if (isMatch) {
+                self.typeString = temString;
                 [self translateTele];
                 
             }
             else{
-                NSLog(@"typeString is %@",self.typeString);
+//                NSLog(@"typeString is %@",self.typeString);
 
-                return NO;
+//                return NO;
+                returnValue = NO;
+
             }
             
         }
         else{
             //delete numbers
             if ([textField.text length] > range.length) {
-                self.typeString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
-                
+//                self.typeString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
+                temString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
+                self.typeString = temString;
                 [self translateTele];
                 
             }
@@ -343,11 +369,19 @@
                 showText.text =@"";
             }
         
-        NSLog(@"typeString is %@",self.typeString);
+//        NSLog(@"typeString is %@",self.typeString);
         }
     }
     
-    return YES;
+//    return YES;
+    returnValue = YES;
+    if (returnValue == NO) {
+        return NO;
+    }
+    else {
+        self.typeString = temString;
+        return YES;
+    }
 }
 
 - (void)translateTele{
