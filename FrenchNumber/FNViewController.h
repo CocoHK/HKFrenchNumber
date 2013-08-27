@@ -10,23 +10,25 @@
 #import <QuartzCore/QuartzCore.h>
 #import <iAd/iAd.h>
 
+@class MFUnderlinedTextView;
+@class FNTextField;
 
-@interface FNViewController : UIViewController<UITextFieldDelegate,ADBannerViewDelegate>{
+@interface FNViewController : UIViewController  {
     IBOutlet UIButton *normalBtn;
     IBOutlet UIButton *chequeBtn;
     IBOutlet UIButton *teleBtn;
 
-    IBOutlet UITextView *showText;
-    IBOutlet UITextField *typeText;
+    IBOutlet MFUnderlinedTextView *showText;
+    IBOutlet FNTextField *typeText;
     IBOutlet ADBannerView *adView;
     
     BOOL translateModel;
-
-
 }
 
 @property (nonatomic, retain) NSCharacterSet *positiveInt;
 @property (nonatomic, retain) NSCharacterSet *point;
 @property (nonatomic, retain) NSString *typeString;
+
+- (IBAction)changeMode:(id)sender;
 
 @end

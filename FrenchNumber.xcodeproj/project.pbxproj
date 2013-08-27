@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1005C16717C159C30054140F /* FNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1005C16617C159C30054140F /* FNTextField.m */; };
+		109BC90517C0DAF900A17D7C /* backgroud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 109BC90417C0DAF900A17D7C /* backgroud.jpg */; };
+		109BC90717C0DC5000A17D7C /* backgroud@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 109BC90617C0DC5000A17D7C /* backgroud@2x.jpg */; };
+		109BC90A17C11AED00A17D7C /* MFUnderlinedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */; };
+		109BC90C17C11EB400A17D7C /* MFUnderlinedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */; };
 		10CCDFF817BEE87500DE1136 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CCDFF717BEE87500DE1136 /* iAd.framework */; };
 		10E4AE6116E8F91B00C0311F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6016E8F91B00C0311F /* UIKit.framework */; };
 		10E4AE6316E8F91B00C0311F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6216E8F91B00C0311F /* Foundation.framework */; };
@@ -39,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1005C16517C159C30054140F /* FNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTextField.h; sourceTree = "<group>"; };
+		1005C16617C159C30054140F /* FNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTextField.m; sourceTree = "<group>"; };
+		109BC90417C0DAF900A17D7C /* backgroud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroud.jpg; path = FrenchNumber/images/backgroud.jpg; sourceTree = "<group>"; };
+		109BC90617C0DC5000A17D7C /* backgroud@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "backgroud@2x.jpg"; path = "FrenchNumber/images/backgroud@2x.jpg"; sourceTree = "<group>"; };
+		109BC90817C11AED00A17D7C /* MFUnderlinedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFUnderlinedTextView.h; path = "third-party codes/MFUnderlinedTextView.h"; sourceTree = "<group>"; };
+		109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFUnderlinedTextView.m; path = "third-party codes/MFUnderlinedTextView.m"; sourceTree = "<group>"; };
 		10CCDFF717BEE87500DE1136 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E4AE6016E8F91B00C0311F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -95,13 +106,25 @@
 		10AFB60E17ABF46600681643 /* third-party codes */ = {
 			isa = PBXGroup;
 			children = (
+				109BC90817C11AED00A17D7C /* MFUnderlinedTextView.h */,
+				109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */,
 			);
 			name = "third-party codes";
+			sourceTree = "<group>";
+		};
+		10D0957517C0305E001F3198 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				109BC90617C0DC5000A17D7C /* backgroud@2x.jpg */,
+				109BC90417C0DAF900A17D7C /* backgroud.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		10E4AE5416E8F91A00C0311F = {
 			isa = PBXGroup;
 			children = (
+				10D0957517C0305E001F3198 /* images */,
 				10E4AE6616E8F91B00C0311F /* FrenchNumber */,
 				10E4AE8D16E8F91B00C0311F /* FrenchNumberTests */,
 				10E4AE5F16E8F91B00C0311F /* Frameworks */,
@@ -138,6 +161,8 @@
 				10E4AE7016E8F91B00C0311F /* FNAppDelegate.m */,
 				10E4AE7816E8F91B00C0311F /* MainStoryboard_iPhone.storyboard */,
 				10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */,
+				1005C16517C159C30054140F /* FNTextField.h */,
+				1005C16617C159C30054140F /* FNTextField.m */,
 				10E4AE7E16E8F91B00C0311F /* FNViewController.h */,
 				10E4AE7F16E8F91B00C0311F /* FNViewController.m */,
 				10AFB60E17ABF46600681643 /* third-party codes */,
@@ -256,6 +281,8 @@
 				10E4AE7716E8F91B00C0311F /* Default-568h@2x.png in Resources */,
 				10E4AE7A16E8F91B00C0311F /* MainStoryboard_iPhone.storyboard in Resources */,
 				10E4AE7D16E8F91B00C0311F /* MainStoryboard_iPad.storyboard in Resources */,
+				109BC90517C0DAF900A17D7C /* backgroud.jpg in Resources */,
+				109BC90717C0DC5000A17D7C /* backgroud@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +320,8 @@
 				10E4AE6D16E8F91B00C0311F /* main.m in Sources */,
 				10E4AE7116E8F91B00C0311F /* FNAppDelegate.m in Sources */,
 				10E4AE8016E8F91B00C0311F /* FNViewController.m in Sources */,
+				109BC90C17C11EB400A17D7C /* MFUnderlinedTextView.m in Sources */,
+				1005C16717C159C30054140F /* FNTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E4AE9516E8F91B00C0311F /* FrenchNumberTests.m in Sources */,
+				109BC90A17C11AED00A17D7C /* MFUnderlinedTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,8 +440,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
 				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,8 +453,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
 				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
