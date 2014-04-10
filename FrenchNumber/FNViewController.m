@@ -12,9 +12,8 @@
 #import "FNTextField.h"
 
 @interface FNViewController () <UITextFieldDelegate,ADBannerViewDelegate> {
-//    CGRect originalBounds;
     CGRect originalFrame;
-
+    
 }
 
 @property (nonatomic, retain) UIButton *dotButton;
@@ -38,33 +37,25 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroud.jpg"]];
-    typeText.frame = CGRectMake(20, 20, 280, 35);
+    self.typeString = @"";
 }
 
 
 - (void)KeyboardWillShowNotification:(NSNotification *)notification {
-
-//    CGRect finalRect;
-//    originalFrame = self.view.frame;
-    NSLog(@"originalFrame is %@",NSStringFromCGRect(originalFrame));
-
     CGSize kbSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-    NSLog(@"keyboard info is %@",[notification userInfo]);
+    
     UIViewAnimationCurve animationCurve;
     [[[notification userInfo] objectForKey:UIKeyboardAnimationCurveUserInfoKey]getValue:&animationCurve];
-    NSLog(@"CurveUserInfoKey is %d",animationCurve);
-
-    NSLog(@"kbSize is %@",NSStringFromCGSize(kbSize));
-
+    
     [UIView animateWithDuration:0.25
                           delay:0
                         options:7
                      animations:^{
                          [self changeFrame:kbSize];
                      } completion:^(BOOL finished) {
-
+                         
                      }
-    ];
+     ];
     
     adView.hidden = YES;
     normalBtn.hidden = YES;
@@ -97,7 +88,7 @@
     normalBtn.hidden = NO;
     chequeBtn.hidden = NO;
     teleBtn.hidden = NO;
-
+    
 }
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -109,46 +100,28 @@
 
 
 
-#pragma mark 
+#pragma mark
 
 - (void)viewDidLoad {
     adView.delegate = self;
-
-//    typeText.borderStyle = UITextBorderStyleNone;
-    typeText.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-    typeText.clipsToBounds = YES;
     
-    typeText.layer.cornerRadius = 6.0;
-    typeText.layer.borderColor = [[UIColor clearColor] CGColor];
-    typeText.layer.borderWidth = 1;
-//    typeText.layer.shadowColor = [[UIColor blackColor] CGColor];
-//    typeText.layer.shadowOpacity = 1.0;
-//    typeText.layer.shadowRadius = 3.0;
-//    typeText.layer.shadowOffset = CGSizeMake(0,3);
-
     normalBtn.layer.cornerRadius = 5.0;
     chequeBtn.layer.cornerRadius = 5.0;
     teleBtn.layer.cornerRadius = 5.0;
     [showText setUnderlineColor:[UIColor colorWithWhite:0 alpha:0.1]];
-
+    
     self.positiveInt = [NSCharacterSet characterSetWithCharactersInString:@"123456789"];
     self.point =[NSCharacterSet characterSetWithCharactersInString:@"."];
     
     [self setTranslationMode:0];
-//    [chequeBtn addTarget:self action:@selector(setTranslationMode:)forControlEvents:UIControlEventTouchUpInside];
+    //    [chequeBtn addTarget:self action:@selector(setTranslationMode:)forControlEvents:UIControlEventTouchUpInside];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self
                                                                          action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     [tap release];
     [super viewDidLoad];
-
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-//    NSLog(@"%@",NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]));
-    NSLog(@"frame%@",NSStringFromCGRect(self.view.frame));
-
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -158,9 +131,7 @@
 #pragma mark changeTranslateMode
 
 - (IBAction)changeMode:(id)sender {
-    [self setTranslationMode:((UIButton *)sender).tag];
-    
-    NSLog(@"translationMode is %d",translateModel);
+    [self setTranslationMode:(int)((UIButton *)sender).tag];
 }
 
 - (void)setTranslationMode:(int)mode {
@@ -176,7 +147,6 @@
         case 0:{
             [typeText setKeyboardType:UIKeyboardTypeDecimalPad];
             [self translateNumber];
-            NSLog(@"typestring is %@",self.typeString);
         }
             break;
         case 1:
@@ -185,48 +155,41 @@
             [self translateNumber];
             
             NSUInteger pointLocation = [self.typeString rangeOfCharacterFromSet:self.point].location;
+            
+            NSMutableAttributedString *attributedString = [[[NSMutableAttributedString alloc] initWithString:self.typeString] autorelease];
+            [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [self.typeString length])];
+            
             if (pointLocation != NSNotFound &&
-                pointLocation < [self.typeString length] - 1) {//存在小数点并且后存在数字大于2
-                NSString *decimalString = [self.typeString substringFromIndex:pointLocation+1];//小数点后的所有数字
-                NSLog(@"decimalString is %@ %d",decimalString,[decimalString length]);
-                NSMutableAttributedString *attributedString = [[[NSMutableAttributedString alloc] initWithString:self.typeString] autorelease];
-                if (([self.typeString length] - pointLocation - 1) > 2) {
-                    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(pointLocation+3, [self.typeString length] - pointLocation - 3)];//小数点后第三位开始变成灰色
-                }
-                NSLog(@"typeString is%d point is %d",[self.typeString length],pointLocation);
-                
-                typeText.attributedText = attributedString;
+                [self.typeString length] - pointLocation - 1 > 2) {
+                NSRange grayRange = NSMakeRange(pointLocation+3, [self.typeString length] - pointLocation - 3);
+                [attributedString removeAttribute:NSForegroundColorAttributeName range:grayRange];
+                [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:grayRange];
             }
+            typeText.attributedText = attributedString;
         }
             break;
         case 2:
         {
             [typeText setKeyboardType:UIKeyboardTypeNumberPad];
-            NSLog(@"typestring is %@",self.typeString);
+            
             [self translateTele];
             
             NSUInteger pointLocation = [self.typeString rangeOfCharacterFromSet:self.point].location;
-            if ([self.typeString length] <= 10 && pointLocation != NSNotFound) {
-                NSMutableAttributedString *attributedString = [[[NSMutableAttributedString alloc] initWithString:self.typeString] autorelease];
-                [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(pointLocation,1)];
-                typeText.attributedText = attributedString;
-            }
-            else if ([self.typeString length] > 10) {
-                if ((pointLocation != NSNotFound && pointLocation > 9)||(pointLocation == NSNotFound)) {
-                    NSMutableAttributedString *attributedString = [[[NSMutableAttributedString alloc] initWithString:self.typeString] autorelease];
-                    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(pointLocation,1)];
-                    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(10,[self.typeString length]-10)];
-                    typeText.attributedText = attributedString;
-                }
-                else {
-                    NSMutableAttributedString *attributedString = [[[NSMutableAttributedString alloc] initWithString:self.typeString] autorelease];
-                    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(pointLocation,1)];
-                    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(11,[self.typeString length]-11)];
-                    typeText.attributedText = attributedString;
-                    
-                }
-            }
             
+            NSMutableAttributedString *attributedString = [[[NSMutableAttributedString alloc] initWithString:self.typeString] autorelease];
+            [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [self.typeString length])];
+            
+            if (pointLocation != NSNotFound) {
+                NSRange rangeAfterPoint = NSMakeRange(pointLocation,[self.typeString length]-pointLocation);
+                [attributedString removeAttribute:NSForegroundColorAttributeName range:rangeAfterPoint];
+                [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rangeAfterPoint];
+            }
+            if ([self.typeString length] > 10) {
+                NSRange rangeAfterTen = NSMakeRange(10,[self.typeString length]-10);
+                [attributedString removeAttribute:NSForegroundColorAttributeName range:rangeAfterTen];
+                [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rangeAfterTen];
+            }
+            typeText.attributedText = attributedString;
         }
             break;
         default:
@@ -234,61 +197,47 @@
     }
 }
 
-- (BOOL)textFieldShouldClear:(UITextField *)textField{
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
     showText.text = @"";
-
+    self.typeString = @"";
     return YES;
     
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSString *temString;
+    NSString *temString = @"";
     BOOL returnValue;
     if (translateModel == 0 || translateModel == 1) {
         // add numbers
         if (range.length == 0) {
-//            self.typeString = [textField.text stringByAppendingString:string];
             temString = [textField.text stringByAppendingString:string];
             NSString *regex = @"^\\d*[\\.]?\\d*$";
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-//            BOOL isMatch = [predicate evaluateWithObject:self.typeString];
             BOOL isMatch = [predicate evaluateWithObject:temString];
-
+            
             if (isMatch) {
                 //judge when the first character is 0
-//                if ([self.typeString characterAtIndex:0] == '0'&&
-//                    [self.typeString length] >= 2 &&
-//                    ([self.typeString characterAtIndex:1] != '.' &&
-//                     [self.typeString characterAtIndex:1] != ','))
-                    if ([temString characterAtIndex:0] == '0'&&
-                        [temString length] >= 2 &&
-                        ([temString characterAtIndex:1] != '.' &&
-                         [temString characterAtIndex:1] != ','))
-
+                if ([temString characterAtIndex:0] == '0'&&
+                    [temString length] >= 2 &&
+                    ([temString characterAtIndex:1] != '.' &&
+                     [temString characterAtIndex:1] != ','))
+                    
                     isMatch = NO;
             }
             if (isMatch) {
-//                if ([self.typeString rangeOfCharacterFromSet:self.point].location == NSNotFound){
-//                    if ([self.typeString length] > 23)
                 if ([temString rangeOfCharacterFromSet:self.point].location == NSNotFound){
                     if ([temString length] > 23)
-                isMatch = NO;
+                        isMatch = NO;
                 }
                 else{
-//                    int location = [self.typeString rangeOfCharacterFromSet:self.point].location;
-                    int location = [temString rangeOfCharacterFromSet:self.point].location;
-
+                    int location = (int)[temString rangeOfCharacterFromSet:self.point].location;
+                    
                     if (translateModel == 0) {
-//                        if ([[self.typeString substringToIndex:location] length] > 23 ||
-//                            [[self.typeString substringFromIndex:location+1] length] > 21)
-
                         if ([[temString substringToIndex:location] length] > 23 ||
                             [[temString substringFromIndex:location+1] length] > 21)
-                        isMatch = NO;
+                            isMatch = NO;
                     }
                     else if (translateModel == 1){
-//                        if ([[self.typeString substringToIndex:location] length] > 23 ||
-//                            [[self.typeString substringFromIndex:location+1] length] > 2)
                         if ([[temString substringToIndex:location] length] > 23 ||
                             [[temString substringFromIndex:location+1] length] > 2)
                             isMatch = NO;
@@ -297,33 +246,27 @@
                 
             }
             
-            
             if (isMatch) {
                 self.typeString = temString;
                 [self translateNumber];
             }
             else{
-//                return NO;
                 returnValue = NO;
             }
         }
         
         else{
             //delete numbers
-            
             if ([textField.text length] > range.length) {
-//                self.typeString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
-//                NSLog(@"textfield is %d range is %d string is %@  typestring is %@",[textField.text length],range.length,string,self.typeString);
                 temString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
-                NSLog(@"textfield is %d range is %d string is %@  typestring is %@",[textField.text length],range.length,string,temString);
                 self.typeString = temString;
                 [self translateNumber];
                 
             }
             else{
                 showText.text =@"";
-            }}
-        
+            }
+        }
     }
     
     
@@ -332,14 +275,10 @@
         
         //add numbers
         if (range.length == 0) {
-            
-//            self.typeString = [textField.text stringByAppendingString:string];
             temString = [textField.text stringByAppendingString:string];
-
             
             NSString *regex = @"^\\d{1,10}$";
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-//            BOOL isMatch = [predicate evaluateWithObject:self.typeString];
             BOOL isMatch = [predicate evaluateWithObject:temString];
             
             if (isMatch) {
@@ -348,32 +287,24 @@
                 
             }
             else{
-//                NSLog(@"typeString is %@",self.typeString);
-
-//                return NO;
                 returnValue = NO;
-
             }
             
         }
         else{
             //delete numbers
             if ([textField.text length] > range.length) {
-//                self.typeString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
                 temString = [textField.text stringByReplacingCharactersInRange:(NSRange)range withString:@""];
                 self.typeString = temString;
                 [self translateTele];
                 
             }
             else{
-                showText.text =@"";
+                showText.text = @"";
             }
-        
-//        NSLog(@"typeString is %@",self.typeString);
         }
     }
     
-//    return YES;
     returnValue = YES;
     if (returnValue == NO) {
         return NO;
@@ -389,8 +320,8 @@
     NSUInteger pointLocation = [self.typeString rangeOfCharacterFromSet:self.point].location;
     if (pointLocation != NSNotFound) {
         NSString *noPointString = [self.typeString stringByReplacingOccurrencesOfString:@"." withString:@""];
-     
-        int length = [noPointString length];
+        
+        int length = (int)[noPointString length];
         int index;
         for (index =0; index < length; index = index +2) {
             NSRange subStringRange;
@@ -401,28 +332,24 @@
                 subStringRange = NSMakeRange(index, 2);
             }
             NSString *subString = [noPointString substringWithRange:subStringRange];
-            NSLog(@"noPointString is %@",noPointString);
             [showString appendString:[self getTens:subString]];
-        }}
-        else{
-    int length = [self.typeString length];
-    int index;
-    for (index =0; index < length; index = index +2) {
-        NSRange subStringRange;
-        if (length - index == 1) {
-            subStringRange = NSMakeRange(index, 1);
         }
-        else {
-            subStringRange = NSMakeRange(index, 2);
+    }
+    else{
+        int length = (int)[self.typeString length];
+        int index;
+        for (index =0; index < length; index = index +2) {
+            NSRange subStringRange;
+            if (length - index == 1) {
+                subStringRange = NSMakeRange(index, 1);
+            }
+            else {
+                subStringRange = NSMakeRange(index, 2);
+            }
+            NSString *subString = [self.typeString substringWithRange:subStringRange];
+            [showString appendString:[self getTens:subString]];
         }
-        NSString *subString = [self.typeString substringWithRange:subStringRange];
-        NSLog(@"self.typeString is %@",self.typeString);
-        [showString appendString:[self getTens:subString]];
-        
-        
-        NSLog(@"typeString is %@",self.typeString);
-        
-    }}
+    }
     showText.text = showString;
     
     
@@ -510,8 +437,6 @@
             [showString appendFormat:@"euro%@ ",([showString isEqualToString:@"un  "])?@"":@"s"];
         }
     }
-    
-    NSLog(@"showString3 is %@",showString);
     return showString;
 }
 
@@ -539,7 +464,6 @@
         }
         [showString appendString:[self getRemainder:typeDecimal unitIndex:0]];
         [showString appendFormat:@"%@%@",[units objectAtIndex:subLength-1],([typeDecimal intValue]> 1)?@"s":@""];
-        NSLog(@"subLength:%d  %@",subLength,[units objectAtIndex:subLength-1]);
     }
     else{
         [showString appendString:@""];
@@ -553,7 +477,7 @@
 - (NSString *)getRemainder:(NSString *)partString unitIndex:(int)unitIndex {
     NSArray *units = [NSArray arrayWithObjects:@"",@"mille",@"million",@"milliard",@"billion",@"billiard",@"trillion",@"trilliard", nil];
     NSMutableString *fullString = [[NSMutableString new]autorelease];
-    int n = [partString length];
+    int n = (int)[partString length];
     
     NSString * subString = nil;
     
@@ -596,17 +520,14 @@
     NSMutableString *centimeString = [[NSMutableString new] autorelease];
     
     if ([centime length]  == 1) {
-        //        int n = [centime intValue]*10;
         [centimeString appendFormat:@"%@ centimes",[self translateTens:[NSString stringWithFormat:@"%d",[centime intValue]*10]]];
     }
     else if ([centime length] > 2) {
         NSString *twoDigits = [centime substringToIndex:2];
         [centimeString appendFormat:@"%@ centime%@",[self translateTens:twoDigits],([twoDigits intValue] >1)?@"s":@""];
-
+        
     }
     else{
-        //        int a = [centime intValue];
-        //        NSLog(@"%d  %@",a,[self translateTens:a]);
         [centimeString appendFormat:@"%@ centime%@",[self translateTens:centime],([centime intValue] >1)?@"s":@""];
         
     }
@@ -614,22 +535,16 @@
     return centimeString;
 }
 
-//keepFirstZero == yes;
-
-//- (NSString *)getTens:(NSString *)tensString keepFirstZero:(BOOL)keepFirstZero {
 - (NSString *)getTens:(NSString *)tensString{
     
     NSString *rmdString = nil;
     if ([tensString characterAtIndex:0] == '0') {
         rmdString = @"zéro ";
-        NSLog(@"rmdString is %@",rmdString);
         
         if ([tensString length] == 2){
             rmdString = [rmdString stringByAppendingString:[self teleUnitNumber:[[tensString substringFromIndex:1] intValue]]];
-            
-            NSLog(@"rmdString is %@",rmdString);
-            
-        }}
+        }
+    }
     else{
         int tens = [tensString intValue];
         if (tens == 1){
@@ -929,8 +844,7 @@
 #pragma mark ADBannerViewDelegate
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"%@",[error description]);
-//    adView.hidden = YES;
+    NSLog(@"%s",__PRETTY_FUNCTION__);
 }
 
 @end
