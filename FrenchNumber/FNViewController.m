@@ -111,7 +111,7 @@
     [showText setUnderlineColor:[UIColor colorWithWhite:0 alpha:0.1]];
     
     self.positiveInt = [NSCharacterSet characterSetWithCharactersInString:@"123456789"];
-    self.point =[NSCharacterSet characterSetWithCharactersInString:@"."];
+    self.point =[NSCharacterSet characterSetWithCharactersInString:@".,"];
     
     [self setTranslationMode:0];
     //    [chequeBtn addTarget:self action:@selector(setTranslationMode:)forControlEvents:UIControlEventTouchUpInside];
