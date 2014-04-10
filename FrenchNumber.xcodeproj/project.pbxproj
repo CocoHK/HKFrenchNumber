@@ -31,6 +31,7 @@
 		10E4AE9216E8F91B00C0311F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE9016E8F91B00C0311F /* InfoPlist.strings */; };
 		10E4AE9516E8F91B00C0311F /* FrenchNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */; };
 		10FC4EC3170DB79200291762 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FC4EC2170DB79200291762 /* QuartzCore.framework */; };
+		CC40C57918F74C6700C2BCAD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC40C57818F74C6700C2BCAD /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		10E4AE9316E8F91B00C0311F /* FrenchNumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenchNumberTests.h; sourceTree = "<group>"; };
 		10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrenchNumberTests.m; sourceTree = "<group>"; };
 		10FC4EC2170DB79200291762 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CC40C57818F74C6700C2BCAD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				1005C16617C159C30054140F /* FNTextField.m */,
 				10E4AE7E16E8F91B00C0311F /* FNViewController.h */,
 				10E4AE7F16E8F91B00C0311F /* FNViewController.m */,
+				CC40C57818F74C6700C2BCAD /* Media.xcassets */,
 				10AFB60E17ABF46600681643 /* third-party codes */,
 				10E4AE6716E8F91B00C0311F /* Supporting Files */,
 			);
@@ -282,6 +285,7 @@
 				10E4AE7A16E8F91B00C0311F /* MainStoryboard_iPhone.storyboard in Resources */,
 				10E4AE7D16E8F91B00C0311F /* MainStoryboard_iPad.storyboard in Resources */,
 				109BC90517C0DAF900A17D7C /* backgroud.jpg in Resources */,
+				CC40C57918F74C6700C2BCAD /* Media.xcassets in Resources */,
 				109BC90717C0DC5000A17D7C /* backgroud@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +441,8 @@
 		10E4AE9916E8F91B00C0311F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
 				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
@@ -450,6 +456,8 @@
 		10E4AE9A16E8F91B00C0311F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
 				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
