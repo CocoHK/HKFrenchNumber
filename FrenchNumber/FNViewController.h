@@ -22,7 +22,7 @@
     IBOutlet FNTextField *typeText;
     IBOutlet ADBannerView *adView;
     
-    int translateModel;
+    BOOL translateMode;
 }
 
 @property (nonatomic, retain) NSCharacterSet *positiveInt;
