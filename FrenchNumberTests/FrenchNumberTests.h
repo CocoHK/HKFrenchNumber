@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Coco. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface FrenchNumberTests : SenTestCase
+@interface FrenchNumberTests : XCTestCase
 
 @end
