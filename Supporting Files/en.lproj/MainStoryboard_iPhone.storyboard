@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="FNViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tn3-wP-HLA"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Dv-8p-L39"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12312" minimumFontSize="24" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0k7-Cu-CEt" customClass="FNTextField">
+                                <rect key="frame" x="20" y="40" width="335" height="36"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="B1R-2v-nHq"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cko-kn-ElX" customClass="MFUnderlinedTextView">
+                                <rect key="frame" x="20" y="96" width="335" height="473"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0cy-0d-C7o">
+                                <rect key="frame" x="20" y="589" width="335" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzo-ee-3m5">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="58"/>
+                                        <color key="backgroundColor" red="0.097026824951171875" green="0.45746535062789917" blue="0.39467063546180725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="16"/>
+                                        <state key="normal" title="Tele">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeMode:" destination="2" eventType="touchUpInside" id="a0d-Ye-vHS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfZ-zq-DCD">
+                                        <rect key="frame" x="118.5" y="0.0" width="98" height="58"/>
+                                        <color key="backgroundColor" red="0.097026824951171875" green="0.45746535062789917" blue="0.39467063546180725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="16"/>
+                                        <state key="normal" title="Cheque">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeMode:" destination="2" eventType="touchUpInside" id="1yk-Tt-xsG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRe-FL-hDK" colorLabel="IBBuiltInLabel-Gray">
+                                        <rect key="frame" x="236.5" y="0.0" width="98.5" height="58"/>
+                                        <color key="backgroundColor" red="0.097026824951171875" green="0.45746535062789917" blue="0.39467063546180725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="16"/>
+                                        <state key="normal" title="Number">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeMode:" destination="2" eventType="touchUpInside" id="zvh-6W-uK7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="R9Z-IM-vhX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="0k7-Cu-CEt" firstAttribute="top" secondItem="tn3-wP-HLA" secondAttribute="bottom" constant="20" id="0sG-Ck-3nT"/>
+                            <constraint firstAttribute="trailing" secondItem="cko-kn-ElX" secondAttribute="trailing" constant="20" id="2mi-gt-ZxU"/>
+                            <constraint firstItem="0cy-0d-C7o" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" id="Dq4-6T-4Oo"/>
+                            <constraint firstItem="cko-kn-ElX" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" id="QyP-rY-5TS"/>
+                            <constraint firstItem="0cy-0d-C7o" firstAttribute="top" secondItem="cko-kn-ElX" secondAttribute="bottom" constant="20" id="TSb-mV-gdB"/>
+                            <constraint firstItem="0k7-Cu-CEt" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" id="dTC-gJ-J3t"/>
+                            <constraint firstItem="8Dv-8p-L39" firstAttribute="top" secondItem="0cy-0d-C7o" secondAttribute="bottom" constant="20" id="das-SD-nnu"/>
+                            <constraint firstAttribute="trailing" secondItem="0cy-0d-C7o" secondAttribute="trailing" constant="20" id="eqh-1o-I1A"/>
+                            <constraint firstItem="cko-kn-ElX" firstAttribute="top" secondItem="0k7-Cu-CEt" secondAttribute="bottom" constant="20" id="glH-fb-C4r"/>
+                            <constraint firstAttribute="trailing" secondItem="0k7-Cu-CEt" secondAttribute="trailing" constant="20" id="iru-zG-naH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chequeBtn" destination="gfZ-zq-DCD" id="6U7-9t-PkP"/>
+                        <outlet property="normalBtn" destination="fRe-FL-hDK" id="L8Y-cj-DlO"/>
+                        <outlet property="showText" destination="cko-kn-ElX" id="lvf-zJ-l7n"/>
+                        <outlet property="teleBtn" destination="Vzo-ee-3m5" id="eZ4-Hb-lpE"/>
+                        <outlet property="typeText" destination="0k7-Cu-CEt" id="Xv8-7m-ArV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-422.5" y="-70.5"/>
+        </scene>
+    </scenes>
+</document>

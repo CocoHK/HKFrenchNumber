@@ -13,6 +13,7 @@
 @implementation FNTextField
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     self.clipsToBounds = YES;
     self.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
     

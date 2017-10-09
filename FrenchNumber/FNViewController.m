@@ -29,77 +29,13 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(KeyboardWillShowNotification:)
-                                                 name:UIKeyboardWillShowNotification
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillHideNotification:)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:nil];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroud.jpg"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroud"]];
     self.typeString = @"";
 }
 
-
-- (void)KeyboardWillShowNotification:(NSNotification *)notification {
-    CGSize kbSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-    
-    UIViewAnimationCurve animationCurve;
-    [[[notification userInfo] objectForKey:UIKeyboardAnimationCurveUserInfoKey]getValue:&animationCurve];
-    
-    [UIView animateWithDuration:0.25
-                          delay:0
-                        options:7
-                     animations:^{
-                         [self changeFrame:kbSize];
-                     } completion:^(BOOL finished) {
-                         
-                     }
-     ];
-    
-    adView.hidden = YES;
-    normalBtn.hidden = YES;
-    chequeBtn.hidden = YES;
-    teleBtn.hidden = YES;
-}
-
-- (void)changeFrame: (CGSize) keyboradSize {
-    CGSize kbSize = keyboradSize;
-    originalFrame = self.view.frame;
-    CGRect finalRect;
-    switch ([UIApplication sharedApplication].statusBarOrientation) {
-        case UIInterfaceOrientationPortrait:
-            finalRect = CGRectMake(originalFrame.origin.x,originalFrame.origin.y,originalFrame.size.width,originalFrame.size.height - kbSize.height+40);
-            break;
-        case UIInterfaceOrientationLandscapeRight:
-            finalRect = CGRectMake(kbSize.width,originalFrame.origin.y,originalFrame.size.width - kbSize.width ,originalFrame.size.height);
-            break;
-        case UIInterfaceOrientationLandscapeLeft:
-            finalRect = CGRectMake(originalFrame.origin.x,originalFrame.origin.y,originalFrame.size.width - kbSize.width,originalFrame.size.height);
-            break;
-        default:
-            break;
-    }
-    self.view.frame = finalRect;
-}
-- (void)keyboardWillHideNotification:(NSNotification *)notification {
-    self.view.frame =  originalFrame;
-    adView.hidden = NO;
-    normalBtn.hidden = NO;
-    chequeBtn.hidden = NO;
-    teleBtn.hidden = NO;
-    
-}
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [super dealloc];
-}
 - (void)dismissKeyboard {
     [typeText resignFirstResponder];
 }
-
-
 
 #pragma mark
 
@@ -115,7 +51,7 @@
     self.point =[NSCharacterSet characterSetWithCharactersInString:@".,"];
     
     [self setTranslationMode:0];
-    //    [chequeBtn addTarget:self action:@selector(setTranslationMode:)forControlEvents:UIControlEventTouchUpInside];
+//    [chequeBtn addTarget:self action:@selector(setTranslationMode:)forControlEvents:UIControlEventTouchUpInside];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self
                                                                          action:@selector(dismissKeyboard)];

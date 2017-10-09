@@ -8,76 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		1005C16717C159C30054140F /* FNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1005C16617C159C30054140F /* FNTextField.m */; };
-		109BC90517C0DAF900A17D7C /* backgroud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 109BC90417C0DAF900A17D7C /* backgroud.jpg */; };
-		109BC90717C0DC5000A17D7C /* backgroud@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 109BC90617C0DC5000A17D7C /* backgroud@2x.jpg */; };
-		109BC90A17C11AED00A17D7C /* MFUnderlinedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */; };
-		109BC90C17C11EB400A17D7C /* MFUnderlinedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */; };
 		10CCDFF817BEE87500DE1136 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CCDFF717BEE87500DE1136 /* iAd.framework */; };
 		10E4AE6116E8F91B00C0311F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6016E8F91B00C0311F /* UIKit.framework */; };
 		10E4AE6316E8F91B00C0311F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6216E8F91B00C0311F /* Foundation.framework */; };
 		10E4AE6516E8F91B00C0311F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6416E8F91B00C0311F /* CoreGraphics.framework */; };
-		10E4AE6B16E8F91B00C0311F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE6916E8F91B00C0311F /* InfoPlist.strings */; };
-		10E4AE6D16E8F91B00C0311F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE6C16E8F91B00C0311F /* main.m */; };
 		10E4AE7116E8F91B00C0311F /* FNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE7016E8F91B00C0311F /* FNAppDelegate.m */; };
-		10E4AE7316E8F91B00C0311F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7216E8F91B00C0311F /* Default.png */; };
-		10E4AE7516E8F91B00C0311F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7416E8F91B00C0311F /* Default@2x.png */; };
-		10E4AE7716E8F91B00C0311F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7616E8F91B00C0311F /* Default-568h@2x.png */; };
-		10E4AE7A16E8F91B00C0311F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7816E8F91B00C0311F /* MainStoryboard_iPhone.storyboard */; };
-		10E4AE7D16E8F91B00C0311F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */; };
 		10E4AE8016E8F91B00C0311F /* FNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE7F16E8F91B00C0311F /* FNViewController.m */; };
-		10E4AE8916E8F91B00C0311F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6016E8F91B00C0311F /* UIKit.framework */; };
-		10E4AE8A16E8F91B00C0311F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E4AE6216E8F91B00C0311F /* Foundation.framework */; };
-		10E4AE9216E8F91B00C0311F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10E4AE9016E8F91B00C0311F /* InfoPlist.strings */; };
-		10E4AE9516E8F91B00C0311F /* FrenchNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */; };
 		10FC4EC3170DB79200291762 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FC4EC2170DB79200291762 /* QuartzCore.framework */; };
+		8A3DB95B1F8AF676007EDCE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3DB9501F8AF66C007EDCE1 /* Images.xcassets */; };
+		8A3DB95C1F8AF679007EDCE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A3DB9521F8AF66C007EDCE1 /* InfoPlist.strings */; };
+		8A3DB95E1F8AF67C007EDCE1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3DB9561F8AF66C007EDCE1 /* MainStoryboard_iPhone.storyboard */; };
+		8A3DB95F1F8AF680007EDCE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DB95A1F8AF66C007EDCE1 /* main.m */; };
+		8A3DB9601F8AF8EF007EDCE1 /* MFUnderlinedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DB94E1F8AF660007EDCE1 /* MFUnderlinedTextView.m */; };
+		8A3DB9641F8AFA9D007EDCE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3DB9631F8AFA78007EDCE1 /* LaunchScreen.xib */; };
 		CC2D40A5190D5D71001F0E4F /* Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2D40A4190D5D71001F0E4F /* Transform.m */; };
-		CC40C57918F74C6700C2BCAD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC40C57818F74C6700C2BCAD /* Media.xcassets */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		10E4AE8B16E8F91B00C0311F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10E4AE5516E8F91B00C0311F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10E4AE5C16E8F91B00C0311F;
-			remoteInfo = FrenchNumber;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1005C16517C159C30054140F /* FNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTextField.h; sourceTree = "<group>"; };
 		1005C16617C159C30054140F /* FNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTextField.m; sourceTree = "<group>"; };
-		109BC90417C0DAF900A17D7C /* backgroud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroud.jpg; path = FrenchNumber/images/backgroud.jpg; sourceTree = "<group>"; };
-		109BC90617C0DC5000A17D7C /* backgroud@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "backgroud@2x.jpg"; path = "FrenchNumber/images/backgroud@2x.jpg"; sourceTree = "<group>"; };
-		109BC90817C11AED00A17D7C /* MFUnderlinedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFUnderlinedTextView.h; path = "third-party codes/MFUnderlinedTextView.h"; sourceTree = "<group>"; };
-		109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFUnderlinedTextView.m; path = "third-party codes/MFUnderlinedTextView.m"; sourceTree = "<group>"; };
 		10CCDFF717BEE87500DE1136 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E4AE6016E8F91B00C0311F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		10E4AE6216E8F91B00C0311F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		10E4AE6416E8F91B00C0311F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		10E4AE6816E8F91B00C0311F /* FrenchNumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FrenchNumber-Info.plist"; sourceTree = "<group>"; };
-		10E4AE6A16E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		10E4AE6C16E8F91B00C0311F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		10E4AE6E16E8F91B00C0311F /* FrenchNumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrenchNumber-Prefix.pch"; sourceTree = "<group>"; };
 		10E4AE6F16E8F91B00C0311F /* FNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNAppDelegate.h; sourceTree = "<group>"; };
 		10E4AE7016E8F91B00C0311F /* FNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNAppDelegate.m; sourceTree = "<group>"; };
-		10E4AE7216E8F91B00C0311F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		10E4AE7416E8F91B00C0311F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		10E4AE7616E8F91B00C0311F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		10E4AE7916E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		10E4AE7C16E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		10E4AE7E16E8F91B00C0311F /* FNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNViewController.h; sourceTree = "<group>"; };
 		10E4AE7F16E8F91B00C0311F /* FNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNViewController.m; sourceTree = "<group>"; };
-		10E4AE8616E8F91B00C0311F /* FrenchNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10E4AE8F16E8F91B00C0311F /* FrenchNumberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FrenchNumberTests-Info.plist"; sourceTree = "<group>"; };
-		10E4AE9116E8F91B00C0311F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		10E4AE9316E8F91B00C0311F /* FrenchNumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenchNumberTests.h; sourceTree = "<group>"; };
-		10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrenchNumberTests.m; sourceTree = "<group>"; };
 		10FC4EC2170DB79200291762 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8A3DB94D1F8AF660007EDCE1 /* MFUnderlinedTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFUnderlinedTextView.h; sourceTree = "<group>"; };
+		8A3DB94E1F8AF660007EDCE1 /* MFUnderlinedTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFUnderlinedTextView.m; sourceTree = "<group>"; };
+		8A3DB9501F8AF66C007EDCE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8A3DB9531F8AF66C007EDCE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A3DB9571F8AF66C007EDCE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		8A3DB9581F8AF66C007EDCE1 /* FrenchNumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FrenchNumber-Info.plist"; sourceTree = "<group>"; };
+		8A3DB9591F8AF66C007EDCE1 /* FrenchNumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrenchNumber-Prefix.pch"; sourceTree = "<group>"; };
+		8A3DB95A1F8AF66C007EDCE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A3DB9631F8AFA78007EDCE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		CC2D40A3190D5D71001F0E4F /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = "<group>"; };
 		CC2D40A4190D5D71001F0E4F /* Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transform.m; sourceTree = "<group>"; };
-		CC40C57818F74C6700C2BCAD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,42 +63,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		10E4AE8216E8F91B00C0311F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10E4AE8916E8F91B00C0311F /* UIKit.framework in Frameworks */,
-				10E4AE8A16E8F91B00C0311F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10AFB60E17ABF46600681643 /* third-party codes */ = {
-			isa = PBXGroup;
-			children = (
-				109BC90817C11AED00A17D7C /* MFUnderlinedTextView.h */,
-				109BC90917C11AED00A17D7C /* MFUnderlinedTextView.m */,
-			);
-			name = "third-party codes";
-			sourceTree = "<group>";
-		};
-		10D0957517C0305E001F3198 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				109BC90617C0DC5000A17D7C /* backgroud@2x.jpg */,
-				109BC90417C0DAF900A17D7C /* backgroud.jpg */,
-			);
-			name = images;
-			sourceTree = "<group>";
-		};
 		10E4AE5416E8F91A00C0311F = {
 			isa = PBXGroup;
 			children = (
-				10D0957517C0305E001F3198 /* images */,
 				10E4AE6616E8F91B00C0311F /* FrenchNumber */,
-				10E4AE8D16E8F91B00C0311F /* FrenchNumberTests */,
+				8A3DB94F1F8AF66C007EDCE1 /* Resources */,
+				8A3DB9511F8AF66C007EDCE1 /* Supporting Files */,
 				10E4AE5F16E8F91B00C0311F /* Frameworks */,
 				10E4AE5E16E8F91B00C0311F /* Products */,
 			);
@@ -138,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */,
-				10E4AE8616E8F91B00C0311F /* FrenchNumberTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,54 +100,55 @@
 		10E4AE6616E8F91B00C0311F /* FrenchNumber */ = {
 			isa = PBXGroup;
 			children = (
+				8A3DB94B1F8AF660007EDCE1 /* ThirdParty */,
 				CC2D40A3190D5D71001F0E4F /* Transform.h */,
 				CC2D40A4190D5D71001F0E4F /* Transform.m */,
 				10E4AE6F16E8F91B00C0311F /* FNAppDelegate.h */,
 				10E4AE7016E8F91B00C0311F /* FNAppDelegate.m */,
-				10E4AE7816E8F91B00C0311F /* MainStoryboard_iPhone.storyboard */,
-				10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */,
 				1005C16517C159C30054140F /* FNTextField.h */,
 				1005C16617C159C30054140F /* FNTextField.m */,
 				10E4AE7E16E8F91B00C0311F /* FNViewController.h */,
 				10E4AE7F16E8F91B00C0311F /* FNViewController.m */,
-				CC40C57818F74C6700C2BCAD /* Media.xcassets */,
-				10AFB60E17ABF46600681643 /* third-party codes */,
-				10E4AE6716E8F91B00C0311F /* Supporting Files */,
 			);
 			path = FrenchNumber;
 			sourceTree = "<group>";
 		};
-		10E4AE6716E8F91B00C0311F /* Supporting Files */ = {
+		8A3DB94B1F8AF660007EDCE1 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				10E4AE6816E8F91B00C0311F /* FrenchNumber-Info.plist */,
-				10E4AE6916E8F91B00C0311F /* InfoPlist.strings */,
-				10E4AE6C16E8F91B00C0311F /* main.m */,
-				10E4AE6E16E8F91B00C0311F /* FrenchNumber-Prefix.pch */,
-				10E4AE7216E8F91B00C0311F /* Default.png */,
-				10E4AE7416E8F91B00C0311F /* Default@2x.png */,
-				10E4AE7616E8F91B00C0311F /* Default-568h@2x.png */,
+				8A3DB94C1F8AF660007EDCE1 /* MFUnderlinedTextView */,
 			);
-			name = "Supporting Files";
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
-		10E4AE8D16E8F91B00C0311F /* FrenchNumberTests */ = {
+		8A3DB94C1F8AF660007EDCE1 /* MFUnderlinedTextView */ = {
 			isa = PBXGroup;
 			children = (
-				10E4AE9316E8F91B00C0311F /* FrenchNumberTests.h */,
-				10E4AE9416E8F91B00C0311F /* FrenchNumberTests.m */,
-				10E4AE8E16E8F91B00C0311F /* Supporting Files */,
+				8A3DB94D1F8AF660007EDCE1 /* MFUnderlinedTextView.h */,
+				8A3DB94E1F8AF660007EDCE1 /* MFUnderlinedTextView.m */,
 			);
-			path = FrenchNumberTests;
+			path = MFUnderlinedTextView;
 			sourceTree = "<group>";
 		};
-		10E4AE8E16E8F91B00C0311F /* Supporting Files */ = {
+		8A3DB94F1F8AF66C007EDCE1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				10E4AE8F16E8F91B00C0311F /* FrenchNumberTests-Info.plist */,
-				10E4AE9016E8F91B00C0311F /* InfoPlist.strings */,
+				8A3DB9501F8AF66C007EDCE1 /* Images.xcassets */,
 			);
-			name = "Supporting Files";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A3DB9511F8AF66C007EDCE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A3DB9631F8AFA78007EDCE1 /* LaunchScreen.xib */,
+				8A3DB9581F8AF66C007EDCE1 /* FrenchNumber-Info.plist */,
+				8A3DB9591F8AF66C007EDCE1 /* FrenchNumber-Prefix.pch */,
+				8A3DB9521F8AF66C007EDCE1 /* InfoPlist.strings */,
+				8A3DB95A1F8AF66C007EDCE1 /* main.m */,
+				8A3DB9561F8AF66C007EDCE1 /* MainStoryboard_iPhone.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,25 +171,6 @@
 			productReference = 10E4AE5D16E8F91B00C0311F /* FrenchNumber.app */;
 			productType = "com.apple.product-type.application";
 		};
-		10E4AE8516E8F91B00C0311F /* FrenchNumberTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 10E4AE9B16E8F91B00C0311F /* Build configuration list for PBXNativeTarget "FrenchNumberTests" */;
-			buildPhases = (
-				10E4AE8116E8F91B00C0311F /* Sources */,
-				10E4AE8216E8F91B00C0311F /* Frameworks */,
-				10E4AE8316E8F91B00C0311F /* Resources */,
-				10E4AE8416E8F91B00C0311F /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				10E4AE8C16E8F91B00C0311F /* PBXTargetDependency */,
-			);
-			name = FrenchNumberTests;
-			productName = FrenchNumberTests;
-			productReference = 10E4AE8616E8F91B00C0311F /* FrenchNumberTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,7 +178,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Coco;
 			};
 			buildConfigurationList = 10E4AE5816E8F91B00C0311F /* Build configuration list for PBXProject "FrenchNumber" */;
@@ -270,7 +194,6 @@
 			projectRoot = "";
 			targets = (
 				10E4AE5C16E8F91B00C0311F /* FrenchNumber */,
-				10E4AE8516E8F91B00C0311F /* FrenchNumberTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,108 +203,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10E4AE6B16E8F91B00C0311F /* InfoPlist.strings in Resources */,
-				10E4AE7316E8F91B00C0311F /* Default.png in Resources */,
-				10E4AE7516E8F91B00C0311F /* Default@2x.png in Resources */,
-				10E4AE7716E8F91B00C0311F /* Default-568h@2x.png in Resources */,
-				10E4AE7A16E8F91B00C0311F /* MainStoryboard_iPhone.storyboard in Resources */,
-				10E4AE7D16E8F91B00C0311F /* MainStoryboard_iPad.storyboard in Resources */,
-				109BC90517C0DAF900A17D7C /* backgroud.jpg in Resources */,
-				CC40C57918F74C6700C2BCAD /* Media.xcassets in Resources */,
-				109BC90717C0DC5000A17D7C /* backgroud@2x.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		10E4AE8316E8F91B00C0311F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10E4AE9216E8F91B00C0311F /* InfoPlist.strings in Resources */,
+				8A3DB95E1F8AF67C007EDCE1 /* MainStoryboard_iPhone.storyboard in Resources */,
+				8A3DB95B1F8AF676007EDCE1 /* Images.xcassets in Resources */,
+				8A3DB95C1F8AF679007EDCE1 /* InfoPlist.strings in Resources */,
+				8A3DB9641F8AFA9D007EDCE1 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		10E4AE8416E8F91B00C0311F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		10E4AE5916E8F91B00C0311F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3DB9601F8AF8EF007EDCE1 /* MFUnderlinedTextView.m in Sources */,
+				8A3DB95F1F8AF680007EDCE1 /* main.m in Sources */,
 				CC2D40A5190D5D71001F0E4F /* Transform.m in Sources */,
-				10E4AE6D16E8F91B00C0311F /* main.m in Sources */,
 				10E4AE7116E8F91B00C0311F /* FNAppDelegate.m in Sources */,
 				10E4AE8016E8F91B00C0311F /* FNViewController.m in Sources */,
-				109BC90C17C11EB400A17D7C /* MFUnderlinedTextView.m in Sources */,
 				1005C16717C159C30054140F /* FNTextField.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		10E4AE8116E8F91B00C0311F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10E4AE9516E8F91B00C0311F /* FrenchNumberTests.m in Sources */,
-				109BC90A17C11AED00A17D7C /* MFUnderlinedTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		10E4AE8C16E8F91B00C0311F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 10E4AE5C16E8F91B00C0311F /* FrenchNumber */;
-			targetProxy = 10E4AE8B16E8F91B00C0311F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		10E4AE6916E8F91B00C0311F /* InfoPlist.strings */ = {
+		8A3DB9521F8AF66C007EDCE1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				10E4AE6A16E8F91B00C0311F /* en */,
+				8A3DB9531F8AF66C007EDCE1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		10E4AE7816E8F91B00C0311F /* MainStoryboard_iPhone.storyboard */ = {
+		8A3DB9561F8AF66C007EDCE1 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				10E4AE7916E8F91B00C0311F /* en */,
+				8A3DB9571F8AF66C007EDCE1 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		10E4AE7B16E8F91B00C0311F /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10E4AE7C16E8F91B00C0311F /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		10E4AE9016E8F91B00C0311F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10E4AE9116E8F91B00C0311F /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -393,28 +254,44 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,21 +301,36 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -448,11 +340,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
-				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				GCC_PREFIX_HEADER = "Supporting Files/FrenchNumber-Prefix.pch";
+				INFOPLIST_FILE = "Supporting Files/FrenchNumber-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "coco.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -463,46 +354,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
-				INFOPLIST_FILE = "FrenchNumber/FrenchNumber-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				GCC_PREFIX_HEADER = "Supporting Files/FrenchNumber-Prefix.pch";
+				INFOPLIST_FILE = "Supporting Files/FrenchNumber-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "coco.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		10E4AE9C16E8F91B00C0311F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FrenchNumber.app/FrenchNumber";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
-				INFOPLIST_FILE = "FrenchNumberTests/FrenchNumberTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		10E4AE9D16E8F91B00C0311F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FrenchNumber.app/FrenchNumber";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FrenchNumber/FrenchNumber-Prefix.pch";
-				INFOPLIST_FILE = "FrenchNumberTests/FrenchNumberTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
@@ -523,15 +379,6 @@
 			buildConfigurations = (
 				10E4AE9916E8F91B00C0311F /* Debug */,
 				10E4AE9A16E8F91B00C0311F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		10E4AE9B16E8F91B00C0311F /* Build configuration list for PBXNativeTarget "FrenchNumberTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				10E4AE9C16E8F91B00C0311F /* Debug */,
-				10E4AE9D16E8F91B00C0311F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
